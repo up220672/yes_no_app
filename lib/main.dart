@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yes_no_app/config/theme/app_theme.dart';
+import 'package:yes_no_app/presentation/chat/chat_screen.dart';
 
 void main() {
   runApp(const MyApp(selectedColor: 3)); // Cambia el número para seleccionar otro color
@@ -19,19 +20,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.getTheme(selectedColor), // Aplicamos el tema con el color seleccionado
       debugShowCheckedModeBanner: false,
       title: 'Yes No App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Yes No App'),
-        ),
-        body: Center(
-          child: FilledButton(
-            onPressed: () {
-              // Aquí va la acción del botón
-            },
-            child: const Text('Click me'),
-          ),
-        ),
-      ),
+      home: const ChatScreen(),
     );
   }
 }
